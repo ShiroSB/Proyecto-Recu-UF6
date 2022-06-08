@@ -264,7 +264,7 @@ public class Options {
 
             int N_anzuelos = 0;
             if (!size.getText().matches("[a-zA-Z]+")){
-                 N_anzuelos = Integer.parseInt(n_anzuelos.getText());
+                N_anzuelos = Integer.parseInt(n_anzuelos.getText());
             }
 
             DATOS_BD_PECES.setN_anzuelos(N_anzuelos);
@@ -321,15 +321,15 @@ public class Options {
 
         if (comprobacion_datos == JOptionPane.OK_OPTION){
 
-           if (especie.getText().equals("") || habitat.getText().equals("") || tiempo_navegacion.getText().equals("") || viento.getText().equals("")
-                   || size.getText().equals("") || nubosidad.getText().equals("") || embarcaciones.getText().equals("")){
-               JOptionPane.showMessageDialog(null, "Debes de llenar todos los campos", "Error",
-                       JOptionPane.ERROR_MESSAGE);
-               /**
-                * Ejecucion de nuevo de la funcion que genera nuestro formulario
-                */
-               TiburonOptions();
-           }
+            if (especie.getText().equals("") || habitat.getText().equals("") || tiempo_navegacion.getText().equals("") || viento.getText().equals("")
+                    || size.getText().equals("") || nubosidad.getText().equals("") || embarcaciones.getText().equals("")){
+                JOptionPane.showMessageDialog(null, "Debes de llenar todos los campos", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+                /**
+                 * Ejecucion de nuevo de la funcion que genera nuestro formulario
+                 */
+                TiburonOptions();
+            }
 
             String direccion_viento = caja3.getSelectedItem().toString();
 
