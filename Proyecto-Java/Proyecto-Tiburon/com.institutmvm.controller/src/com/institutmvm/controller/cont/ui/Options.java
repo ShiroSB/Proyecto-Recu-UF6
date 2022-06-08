@@ -142,9 +142,17 @@ public class Options {
 
             String genero = caja2.getSelectedItem().toString();
 
-            Float tama = Float.parseFloat(size.getText());
+            Float tama = Float.valueOf(0);
+            if (!size.getText().matches("[a-zA-Z]+")){
+                tama = Float.parseFloat(size.getText());
+            }
 
-            Float embar = Float.parseFloat(embarcaciones.getText());
+            Float embar = Float.valueOf(0);
+            if (!embarcaciones.getText().matches("[a-zA-Z]+")){
+                embar = Float.parseFloat(embarcaciones.getText());
+            }
+
+
 
 
             Pajaros DATOS_BD_PAJARO = new Pajaros(especie.getText(),genero,habitat.getText(),tiempo_navegacion.getText(),hora_llegada.getText(),viento.getText(),
@@ -231,9 +239,15 @@ public class Options {
 
             String genero = caja2.getSelectedItem().toString();
 
-            Float tama = Float.parseFloat(size.getText());
+            Float tama = Float.valueOf(0);
+            if (!size.getText().matches("[a-zA-Z]+")){
+                tama = Float.parseFloat(size.getText());
+            }
 
-            Float embar = Float.parseFloat(embarcaciones.getText());
+            Float embar = Float.valueOf(0);
+            if (!embarcaciones.getText().matches("[a-zA-Z]+")){
+                embar = Float.parseFloat(embarcaciones.getText());
+            }
 
             String profundida = prof.getSelectedItem().toString();
 
@@ -247,7 +261,11 @@ public class Options {
 
             DATOS_BD_PECES.setT_anzuelo(t_anzuelos.getText());
 
-            int N_anzuelos = Integer.parseInt(n_anzuelos.getText());
+
+            int N_anzuelos = 0;
+            if (!size.getText().matches("[a-zA-Z]+")){
+                 N_anzuelos = Integer.parseInt(n_anzuelos.getText());
+            }
 
             DATOS_BD_PECES.setN_anzuelos(N_anzuelos);
 
@@ -317,9 +335,15 @@ public class Options {
 
             String genero = caja2.getSelectedItem().toString();
 
-            Float tama = Float.parseFloat(size.getText());
+            Float tama = Float.valueOf(0);
+            if (!size.getText().matches("[a-zA-Z]+")){
+                tama = Float.parseFloat(size.getText());
+            }
 
-            Float embar = Float.parseFloat(embarcaciones.getText());
+            Float embar = Float.valueOf(0);
+            if (!embarcaciones.getText().matches("[a-zA-Z]+")){
+                embar = Float.parseFloat(embarcaciones.getText());
+            }
 
             String profundida = prof.getSelectedItem().toString();
 
